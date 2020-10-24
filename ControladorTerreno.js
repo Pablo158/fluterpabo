@@ -5,7 +5,7 @@ var libro = require("./ModeloTerreno"),
 rutas.post("/obtenerTodos", (request, response) => {
   var body = request.body;
   console.log(body);
-  terreno.find({ idPersona: body.idPersona }, (err, datos) => {
+  libro.find({ idPersona: body.idPersona }, (err, datos) => {
     if (err) {
       console.log(err);
       throw err;
