@@ -4,14 +4,15 @@
   "description": "hola soy Pablo Cordova",
   "main": "index.js",
   "scripts": {
-    "start":"node ./index.js",
-    "dev":"nodemon ./index.js"
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.9"
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.6"
   }
 }
