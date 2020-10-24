@@ -1,4 +1,4 @@
-var terreno = require("./ModeloTerreno"),
+var libro = require("./ModeloTerreno"),
   express = require("express"),
   rutas = express.Router();
 
@@ -21,12 +21,12 @@ rutas.post("/obtenerTodos", (request, response) => {
 
 rutas.post("/crear", (request, response) => {
   var body = request.body;
-  terreno.insertMany(
+  libro.insertMany(
     {
       idPersona: body.idPersona,
-      dimension: body.dimension,
-      barrio: body.barrio,
-      calleprincipal: body.calleprincipal,
+      nombre: body.nombre,
+      descripcion: body.descripcion,
+      anio: body.anio,
     },
     (err, resp) => {
       if (err) {
@@ -40,15 +40,15 @@ rutas.post("/crear", (request, response) => {
 rutas.post("/editar", (request, response) => {
   var body = request.body;
   console.log(body);
-  terreno.updateOne(
+  libro.updateOne(
     {
       _id: body._id,
     },
     {
       $set:{
-        dimension: body.dimension,
-        barrio: body.barrio,
-        calleprincipal: body.calleprincipal,
+        nombre: body.nombre,
+        descripcion: body.descripcion,
+        anio: body.anio,
       }
     },
     (err, res) => {
@@ -62,7 +62,7 @@ rutas.post("/editar", (request, response) => {
 });
 rutas.post("/eliminar", (request, response) => {
   var body = request.body;
-  terreno.deleteOne(
+  libro.deleteOne(
     {
       _id: body._id,
     },

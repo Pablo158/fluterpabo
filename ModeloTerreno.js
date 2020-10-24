@@ -1,10 +1,11 @@
 var mongoose= require("mongoose");
 mongoose.Schema=mongoose.Schema;
 var atributos=new mongoose.Schema({
-    idPersona:{type:String,trim:true},
-    dimension:{type:String,trim:true},
-    barrio:{type:String, trim:true},
-    calleprincipal:{type:String,trim:true}
+    idLibro:{type:String,trim:true},
+    nombre:{type:String,trim:true},
+    descripcion:{type:String, trim:true},
+    anio:{type:String,trim:true},
+    idPersona:{type:String,trim:true}
 })
-var terreno=mongoose.model('terreno',atributos);
-module.exports=terreno;
+var libro=mongoose.model('libro',atributos);
+module.exports=libro;
